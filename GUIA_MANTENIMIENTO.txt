@@ -1,0 +1,23 @@
+UDESA HORARIOS — MANTENIMIENTO
+
+DURANTE EL SEMESTRE
+No hacer nada.
+AULAS y Registro de actividades se actualizan en Drive; la web detecta modifiedTime y sincroniza automáticamente.
+
+SI EL BRIDGE FALLA TEMPORALMENTE
+La app usa la última copia válida y Control de datos muestra RESPALDO_LOCAL.
+
+AL COMENZAR UN NUEVO SEMESTRE
+1. Tener el nuevo CURSOS y AULAS en Drive.
+2. Ejecutar: python actualizar_periodo.py
+3. Indicar año, Otoño/Primavera, camada ingresante y links de AULAS/CURSOS.
+4. Si es un año nuevo, también pide Registro de actividades del año.
+5. Copiar/actualizar CONFIGURACION_PRIVADA.gs en Apps Script y ejecutar configurarBridge().
+6. Subir a GitHub el nuevo fuentes_udesahorarios.json.
+7. No tocar app.py ni el motor.
+
+PLANES ACADÉMICOS
+Cuando cambie udesa_plan_academico_master.xlsx, reemplazar el archivo en Drive manteniendo el mismo ID si es posible. Si cambia el ID, actualizarlo en el bridge. La web lo detectará como cualquier otra fuente.
+
+CATÁLOGOS TRANSVERSALES
+Mismo criterio para aulas_udesA.xlsx y Area de Charlas, Camada y codigos.xlsx.

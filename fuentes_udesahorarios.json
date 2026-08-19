@@ -1,0 +1,94 @@
+{
+  "periodo_activo": "2026_PRIMAVERA",
+  "cohorte_ancla": {
+    "anio": 2026,
+    "camada_ingreso": 38
+  },
+  "defaults": {
+    "sede": "Campus",
+    "variante": "Regular",
+    "incluir_optativas": false
+  },
+  "fuentes_globales": {
+    "plan_master": "data/udesa_plan_academico_master.xlsx",
+    "catalogo_espacios": "data/aulas_udesA.xlsx",
+    "catalogo_academico_legacy": "data/Area de Charlas, Camada y codigos.xlsx"
+  },
+  "fuentes_anuales": {
+    "eventos": {
+      "2026": "data/Registro de actividades 2026 (1).xlsx"
+    }
+  },
+  "periodos": {
+    "2026_PRIMAVERA": {
+      "anio": 2026,
+      "semestre": "PRIMAVERA",
+      "fecha_inicio": null,
+      "fecha_fin": null,
+      "fuentes": {
+        "cursos": "data/CURSOS PRIMAVERA 26.xlsx",
+        "aulas": "data/AULAS- PRIMAVERA 2026- FINAL.xlsx"
+      }
+    }
+  },
+  "ajustes_manuales": {
+    "capacidades": {
+      "M002": 20
+    }
+  },
+  "sincronizacion": {
+    "habilitada": true,
+    "proveedor": "apps_script_bridge",
+    "ttl_segundos": 120,
+    "fuentes": {
+      "aulas": {
+        "bridge_key": "aulas_2026_primavera",
+        "destino": "data/AULAS- PRIMAVERA 2026- FINAL.xlsx",
+        "label": "AULAS",
+        "periodos": [
+          "2026_PRIMAVERA"
+        ]
+      },
+      "cursos": {
+        "bridge_key": "cursos_2026_primavera",
+        "destino": "data/CURSOS PRIMAVERA 26.xlsx",
+        "label": "CURSOS",
+        "periodos": [
+          "2026_PRIMAVERA"
+        ]
+      },
+      "eventos": {
+        "bridge_key": "eventos_2026",
+        "destino": "data/Registro de actividades 2026 (1).xlsx",
+        "label": "Eventos",
+        "periodos": [
+          "2026_PRIMAVERA"
+        ]
+      },
+      "plan_master": {
+        "bridge_key": "plan_master",
+        "destino": "data/udesa_plan_academico_master.xlsx",
+        "label": "Planes académicos",
+        "periodos": [
+          "2026_PRIMAVERA"
+        ]
+      },
+      "catalogo_espacios": {
+        "bridge_key": "catalogo_espacios",
+        "destino": "data/aulas_udesA.xlsx",
+        "label": "Catálogo de espacios",
+        "periodos": [
+          "2026_PRIMAVERA"
+        ]
+      },
+      "catalogo_legacy": {
+        "bridge_key": "catalogo_legacy",
+        "destino": "data/Area de Charlas, Camada y codigos.xlsx",
+        "label": "Catálogo académico auxiliar",
+        "periodos": [
+          "2026_PRIMAVERA"
+        ]
+      }
+    }
+  }
+}
